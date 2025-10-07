@@ -19,9 +19,7 @@
     "fakerphp/faker": "^1.20",
     "mockery/mockery": "^1.5",
     "nunomaduro/collision": "^5.11",
-    "phpunit/phpunit": "^9.6",
-    "laravel/pint": "^1.0",
-    "laravel/sail": "^1.0.1"
+    "phpunit/phpunit": "^9.6"
   },
   "autoload": {
     "psr-4": {
