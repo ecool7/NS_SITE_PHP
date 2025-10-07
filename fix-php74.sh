@@ -29,16 +29,16 @@ if [[ "$PHP_VERSION" == 7.4* ]]; then
     "license": "MIT",
     "require": {
         "php": "^7.4|^8.0",
-        "laravel/framework": "^9.0",
-        "laravel/tinker": "^2.7"
+        "laravel/framework": "^8.0",
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.0",
-        "phpunit/phpunit": "^9.5.10"
+        "nunomaduro/collision": "^5.0",
+        "phpunit/phpunit": "^9.3.3"
     },
     "autoload": {
         "psr-4": {
@@ -91,7 +91,7 @@ if [[ "$PHP_VERSION" == 7.4* ]]; then
 }
 COMPOSER_EOF
     
-    echo "✅ Created PHP 7.4 compatible composer.json"
+    echo "✅ Created PHP 7.4 compatible composer.json (Laravel 8.x)"
     
     # Удаляем старые зависимости
     echo "🧹 Removing old dependencies..."
@@ -105,6 +105,7 @@ COMPOSER_EOF
         echo "✅ Dependencies installed successfully"
     else
         echo "❌ Failed to install dependencies"
+        echo "💡 Try running: composer install --ignore-platform-reqs"
         exit 1
     fi
     
